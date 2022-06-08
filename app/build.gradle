@@ -8,7 +8,7 @@ android {
     compileSdk 32
 
     defaultConfig {
-        applicationId "com.uluumbch.moslemapp"
+        applicationId "com.example.UasAPI"
         minSdk 21
         targetSdk 32
         versionCode 1
