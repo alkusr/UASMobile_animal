@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.uasAPI.ui.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+
+    <fragment
+        android:id="@+id/nav_sea"
+        android:name="com.example.uasAPI.ui.sea.ListSeaFragment"
+        android:label="ListSeaFragment" >
+        <action
+            android:id="@+id/action_listSeaFragment_to_detailSeaFragment"
+            app:destination="@id/detailSeaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailSeaFragment"
+        android:name="com.example.uasAPI.ui.sea.DetailSeaFragment"
+        android:label="DetailSeaFragment" />
+
+    <fragment
+        android:id="@+id/nav_fish"
+        android:name="com.example.uasAPI.ui.fish.ListFishFragment"
+        android:label="ListFishFragment" >
+        <action
+            android:id="@+id/action_listFishFragment_to_detailFishFragment"
+            app:destination="@id/detailFishFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFishFragment"
+        android:name="com.example.uasAPI.ui.fish.DetailFishFragment"
+        android:label="DetailFishFragment" />
+
+    <fragment
+        android:id="@+id/nav_bugs"
+        android:name="com.example.uasAPI.ui.bugs.ListBugsFragment"
+        android:label="ListBugsFragment" >
+        <action
+            android:id="@+id/action_listBugsFragment_to_detailBugsFragment"
+            app:destination="@id/detailBugsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailBugsFragment"
+        android:name="com.example.uasAPI.ui.bugs.DetailBugsFragment"
+        android:label="DetailBugsFragment" />
+</navigation>
