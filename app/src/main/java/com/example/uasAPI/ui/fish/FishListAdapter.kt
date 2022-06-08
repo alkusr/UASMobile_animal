@@ -19,6 +19,23 @@ class FishListAdapter(private val clickListener: FishListener) :
         }
     }
 
+    //disini changes
+    companion object DiffCallback: DiffUtil.ItemCallback<Fish.Data>() {
+        override fun areItemsTheSame(
+            oldItem: Fish.Data,
+            newItem: Fish.Data
+        ): Boolean {
+            return oldItem.name == newItem.name
+        }
+
+        override fun areContentsTheSame(
+            oldItem: Fish.Data,
+            newItem: Fish.Data
+        ): Boolean {
+            return oldItem.name == newItem.name
+        }
+    }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FishViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
         return FishViewHolder(
@@ -29,17 +46,6 @@ class FishListAdapter(private val clickListener: FishListener) :
     override fun onBindViewHolder(holder: FishViewHolder, position: Int) {
         val doa = getItem(position)
         holder.bind(clickListener, doa)
-    }
-
-    companion object DiffCallback : DiffUtil.ItemCallback<Fish.Data>() {
-        override fun areItemsTheSame(oldItem: Fish.Data, newItem: Fish.Data): Boolean {
-            return oldItem.rarity == newItem.rarity
-        }
-
-        override fun areContentsTheSame(oldItem: Fish.Data, newItem: Fish.Data): Boolean {
-            return oldItem.rarity == newItem.rarity
-        }
-
     }
 }
 

@@ -26,7 +26,7 @@ class MyViewModel : ViewModel() {
     private val _fishtunggal = MutableLiveData<Fish.Data>()
     val fishtunggal: LiveData<Fish.Data> = _fishtunggal
 
-    // penampung data untuk API asmaul husna
+    // penampung data untuk API sea
     private val _listsea = MutableLiveData<Sea>()
     val listsea: LiveData<Sea> = _listsea
 

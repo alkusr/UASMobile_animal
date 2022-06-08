@@ -1,18 +1,18 @@
 package com.example.uasAPI.network
 
-
 import com.squareup.moshi.Json
 
 data class Bugs(
     val data: List<Data>
 ) {
     data class Data(
-        val id: String,
-        val rarity: String,
-        val location: String,
-        @Json(name = "file-name")
-        val name: String,
-        @Json(name = "museum-phrase")
-        val phrase: String
+        @Json(name = "penerbit")
+        val penerbit: String,
+        @Json(name = "no_anggota")
+        val no_anggota: String,
+        @Json(name = "wilayah")
+        val wilayah: String,
+        @Json(name = "tahun_masuk")
+        val tahun_masuk: String
     )
 }

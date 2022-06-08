@@ -7,12 +7,15 @@ data class Sea(
     val data: List<Data>
 ) {
     data class Data(
-        val id: String,
-        val rarity: String,
-        val location: String,
-        @Json(name = "file-name")
-        val name: String,
-        @Json(name = "museum-phrase")
-        val phrase: String
+        @Json(name = "nama")
+        val nama: String,
+        @Json(name = "bentuk")
+        val bentuk: String,
+        @Json(name = "tinggi_meter")
+        val tinggi_meter: String,
+        @Json(name = "estimasi_letusan_terakhir")
+        val estimasi_letusan_terakhir: String,
+        @Json(name = "geolokasi")
+        val geolokasi: String
     )
 }

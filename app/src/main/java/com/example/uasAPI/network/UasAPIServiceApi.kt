@@ -6,7 +6,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.http.GET
 
-private val BASE_URL = "https://acnhapi.com/v1/"
+private val BASE_URL = "https://indonesia-public-static-api.vercel.app/api/"
 
 private val moshi = Moshi.Builder()
     .add(KotlinJsonAdapterFactory())
@@ -17,19 +17,19 @@ private val retrofit = Retrofit.Builder()
     .baseUrl(BASE_URL)
     .build()
 
-interface DoaHarianServiceApi {
-    @GET("fish")
+interface UasAPIServiceApi {
+    @GET("heroes")
     suspend fun getFish(): Fish
 
-    @GET("sea")
+    @GET("volcanoes")
     suspend fun getSea(): Sea
 
-    @GET("bugs")
+    @GET("publishers")
     suspend fun getBugs(): Bugs
 }
 
 object UasAPIApi {
-    val retrofitServiceApi: DoaHarianServiceApi by lazy {
-        retrofit.create(DoaHarianServiceApi::class.java)
+    val retrofitServiceApi: UasAPIServiceApi by lazy {
+        retrofit.create(UasAPIServiceApi::class.java)
     }
 }

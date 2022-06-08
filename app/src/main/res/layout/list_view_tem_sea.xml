@@ -29,7 +29,7 @@
             android:padding="8dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"
             android:textSize="18sp"
-            android:text="@{sea.name}"
+            android:text="@{sea.nama}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="text1" />

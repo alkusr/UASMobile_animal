@@ -13,7 +13,6 @@ import com.example.uasAPI.ui.FishListAdapter
 import com.example.uasAPI.ui.FishListener
 import com.example.uasAPI.ui.MyViewModel
 
-
 class ListFishFragment : Fragment() {
     private val viewModel: MyViewModel by activityViewModels()
 
@@ -31,8 +30,6 @@ class ListFishFragment : Fragment() {
             findNavController()
                 .navigate(R.id.action_listFishFragment_to_detailFishFragment)
         })
-
-
         return binding.root
     }
 

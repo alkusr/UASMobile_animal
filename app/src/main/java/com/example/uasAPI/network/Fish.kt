@@ -7,12 +7,13 @@ data class Fish(
     val data: List<Data>
 ) {
     data class Data(
-        val id: String,
-        val rarity: String,
-        val location: String,
-        @Json(name = "file-name")
+        @Json(name = "name")
         val name: String,
-        @Json(name = "museum-phrase")
-        val phrase: String
+        @Json(name = "birth_year")
+        val birth_year: String,
+        @Json(name = "death_year")
+        val death_year: String,
+        @Json(name = "description")
+        val description: String
     )
 }

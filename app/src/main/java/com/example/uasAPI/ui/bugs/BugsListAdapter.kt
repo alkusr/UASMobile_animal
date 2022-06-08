@@ -24,14 +24,14 @@ ListAdapter<Bugs.Data, BugsListAdapter.BugsViewHolder>(DiffCallback){
             oldItem: Bugs.Data,
             newItem: Bugs.Data
         ): Boolean {
-            return oldItem.rarity == newItem.rarity
+            return oldItem.penerbit == newItem.penerbit
         }
 
         override fun areContentsTheSame(
             oldItem: Bugs.Data,
             newItem: Bugs.Data
         ): Boolean {
-            return oldItem.rarity == newItem.rarity
+            return oldItem.penerbit == newItem.penerbit
         }
     }
 

@@ -24,14 +24,14 @@ ListAdapter<Sea.Data, SeaListAdapter.SeaViewHolder>(DiffCallback){
             oldItem: Sea.Data,
             newItem: Sea.Data
         ): Boolean {
-            return oldItem.rarity == newItem.rarity
+            return oldItem.nama == newItem.nama
         }
 
         override fun areContentsTheSame(
             oldItem: Sea.Data,
             newItem: Sea.Data
         ): Boolean {
-            return oldItem.rarity == newItem.rarity
+            return oldItem.nama == newItem.nama
         }
     }
 
